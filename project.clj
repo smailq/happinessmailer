@@ -21,12 +21,9 @@
 
   :min-lein-version "2.5.3"
 
-  :figwheel {:ring-handler happinessmailer.core/app}
-
   :source-paths ["src/clj"]
 
-  :plugins [[lein-figwheel "0.5.0-1" :exclusions [cider/cider-nrepl]]
-            [lein-garden "0.2.6"]
+  :plugins [[lein-garden "0.2.6"]
             [lein-ring "0.9.7"]
             [environ/environ.lein "0.3.1"]]
 
