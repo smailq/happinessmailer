@@ -67,10 +67,6 @@
     (wrap-session {:store (cookie-store {:key (System/getenv "COOKIE_KEY")})
                    :cookie-attrs {:max-age (* 60 60 24 7)}}))) ; 7 days in sec
 
-; (defn -main [& [port]]
-;   (let [port (Integer. (or port (env :port) 5000))]
-;     (jetty/run-jetty (site #'app) {:port port :join? false})))
-
 (defn -main [& [port]]
   (let [port (Integer. (or port (env :port) 5000))]
     (jetty/run-jetty (site #'app) {:port port :join? false})))
